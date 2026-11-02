@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JB Lab · Single-molecule Biophysics Lab, POSTECH</title>
+<meta name="description" content="Jong-Bong Lee's Single-molecule Biophysics Lab at POSTECH: DNA mismatch repair, tunneling nanotubes and single-molecule imaging techniques.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JB Lab · Single-molecule Biophysics Lab, POSTECH">
+<meta property="og:description" content="Watching life in real time: single-molecule biophysics at POSTECH.">
+<meta property="og:url" content="https://jblab.postech.ac.kr/">
+<meta property="og:image" content="https://jblab.postech.ac.kr/img/og-image.png">
+<link rel="canonical" href="https://jblab.postech.ac.kr/">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand-wrap">
+      <a class="emblem" href="https://www.postech.ac.kr/kor/index.do" target="_blank" rel="noopener noreferrer" aria-label="POSTECH homepage"><img src="img/postech-emblem.png" alt="POSTECH emblem" width="192" height="192"></a>
+      <span class="brand-div" aria-hidden="true"></span>
+      <a class="brand" href="#top">JB Lab</a>
+    </div>
+    <nav class="main" aria-label="Sections">
+      <a href="#about" data-sec="about">About</a><a href="#research" data-sec="research">Research</a><a href="#publications" data-view="publications">Publications</a><a href="#members" data-view="members">Members</a><a href="#gallery" data-view="gallery">Gallery</a><a href="#contact" data-sec="contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="view" data-view="home">
+<div class="hero" id="top">
+  <canvas id="field" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="eyebrow">Single-molecule Biophysics Lab · POSTECH</div>
+    <h1>Watching life <em>in real time</em></h1>
+    <ol class="stages" id="stages" aria-label="DNA mismatch repair steps shown in the animation">
+      <li class="on"><b>I</b>Mismatch recognition</li>
+      <li><b>II</b>Signal transmission</li>
+      <li><b>III</b>Strand excision</li>
+      <li><b>IV</b>DNA resynthesis</li>
+    </ol>
+  </div>
+  <button class="anim-btn" id="anim-btn" type="button" aria-pressed="false">Pause animation</button>
+</div>
+<section id="about">
+  <div class="wrap welcome">
+    <div class="sec-head about-head">
+      <div class="eyebrow">About</div>
+    </div>
+    <div class="body">
+      <p><strong class="lead-in">Our laboratory</strong> began in February 2007 in the Department of Physics at POSTECH, in Science Building III. We use single-molecule biophysics techniques to study various biological problems, and we develop new techniques when our questions call for them.</p>
+      <p>We are always welcoming passionate and creative students and researchers. If you want to ask bold questions about how life works, we invite you to <a href="#contact">grow with us</a>.</p>
+    </div>
+    <figure class="since" lang="en" aria-labelledby="since-cap">
+      <figcaption id="since-cap">
+        <span class="since-title">Since 2007</span>
+        <span class="since-key"><span><i class="mk tool"></i>Techniques we developed</span></span>
+      </figcaption>
+      <ol class="tl">
+        <li class="start"><span class="yr">2007</span><i class="mk start"></i><b>Lab founded</b><span class="src">POSTECH Physics, Science Bldg III</span></li>
+        <li class="tool"><span class="yr">2012</span><i class="mk tool"></i><b>Polarization-controlled photoswitching</b><span class="src">Physical Review Letters</span></li>
+        <li class="tool"><span class="yr">2017</span><i class="mk tool"></i><b>Extended depth-of-field imaging-force spectroscopy</b><span class="src">Optics Express</span></li>
+        <li class="tool"><span class="yr">2019</span><i class="mk tool"></i><b>DNA skybridge</b><span class="src">Nucleic Acids Research</span></li>
+        <li class="tool"><span class="yr">2025</span><i class="mk tool"></i><b>DNA Hanger</b><span class="src">Small</span></li>
+        <li class="tool"><span class="yr">2026</span><i class="mk tool"></i><b>smDeepFLUOR</b><span class="src">Nature Communications</span></li>
+      </ol>
+    </figure>
+  </div>
+</section>
+
+<section id="research">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Research</div>
+      <h2>From DNA mismatch repair to cell-to-cell nanotubes</h2>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Research programs">
+      <button class="tab" role="tab" id="tab-dna" aria-selected="true" data-g="dna">DNA Mismatch Repair</button>
+      <button class="tab" role="tab" id="tab-cell" aria-selected="false" data-g="cell">Cellular Dynamics</button>
+      <button class="tab" role="tab" id="tab-tech" aria-selected="false" data-g="tech">Single-molecule Techniques</button>
+    </div>
+    <div class="topics" id="topics" role="tabpanel"></div>
+  </div>
+</section>
+
+<section id="highlights">
+  <div class="wrap">
+    <div class="sec-head row-head"><div><div class="eyebrow">Publications</div><h2>Selected publications</h2></div><a class="more-link" href="#publications">All publications &rarr;</a></div>
+    <ol class="sel-list" id="selected"></ol>
+  </div>
+</section>
+
+<section id="team">
+  <div class="wrap">
+    <div class="sec-head row-head"><div><div class="eyebrow">Members</div><h2>Our team</h2></div><a class="more-link" href="#members">Members &amp; alumni &rarr;</a></div>
+    <ul class="team-grid" id="team-grid"></ul>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact">
+    <div class="sec-head"><h2>Contact</h2></div>
+    <div class="cards">
+      <div class="cinfo"><span class="eyebrow">Lab</span><span>POSTECH Science Bldg III, 006A</span></div>
+      <div class="cinfo"><span class="eyebrow">Address</span><span>77 Cheongam-ro, Nam-gu, Pohang, Gyeongbuk 37673, Korea</span></div>
+      <div class="cinfo"><span class="eyebrow">Lab phone</span><div class="copyrow"><span>+82-54-279-2756</span><button class="copy" id="copy-tel" data-v="+82-54-279-2756">Copy</button></div></div>
+    </div>
+  </div>
+</section>
+</div>
+<div class="view" data-view="publications" hidden>
+<section class="page" aria-labelledby="pubs-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Publications</div>
+      <h2 id="pubs-title">Papers &amp; preprints</h2>
+      <p>Corresponding authors marked with *, equal contribution with #.</p>
+    </div>
+    <div class="pub-tools">
+      <div class="tabs tabs-flush" role="group" aria-label="Filter">
+        <button class="tab" id="f-all" aria-pressed="true" aria-selected="true" data-f="all">All</button>
+        <button class="tab" id="f-paper" aria-selected="false" data-f="paper">Papers</button>
+        <button class="tab" id="f-pre" aria-selected="false" data-f="pre">Preprints</button>
+      </div>
+      <input id="pub-search" type="search" placeholder="Search title, author or journal" aria-label="Search publications">
+      <span class="pub-count" id="pub-count"></span>
+    </div>
+    <div id="pub-list"></div>
+  </div>
+</section>
+</div>
+<div class="view" data-view="members" hidden>
+<section class="page" aria-labelledby="people-title">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow" id="people-title">Members</div></div>
+    <div class="group-label first">Principal Investigator · Professor</div>
+    <div class="pi">
+      <div class="avatar photo"><img src="img/people/jblee.webp" alt="Jong-Bong Lee" width="320" height="320"></div>
+      <div>
+        <h3>Jong-Bong Lee <span class="ko pi-ko">(이종봉)</span></h3>
+        <p class="pi-title">Professor, Department of Physics &amp; I-BIO, POSTECH<br>Vice President of Academic Affairs, POSTECH</p>
+        <dl class="facts">
+          <dt>Office</dt><dd>Science Bldg III, Room 215 (공학3동 215호)</dd>
+          <dt>Tel</dt><dd>054-279-2095</dd>
+          <dt>E-mail</dt><dd class="mono">jblee@postech.ac.kr</dd>
+        </dl>
+      </div>
+      <div class="pi-bio">
+        <div class="bio-cols">
+          <div class="bio-col" role="group" aria-labelledby="bio-edu"><h4 id="bio-edu">Education</h4><ul class="cv cv-short">
+            <li><time>2004</time><span>Ph.D., Physics, Brandeis University, USA <small>Advisor: Prof. Robert B. Meyer</small></span></li>
+            <li><time>1996</time><span>M.S., Physics, Sogang University <small>Advisor: Prof. Sin-Doo Lee</small></span></li>
+            <li><time>1993</time><span>B.S., Physics (minor in Mathematics), Sogang University</span></li>
+          </ul></div>
+          <div class="bio-col" role="group" aria-labelledby="bio-car"><h4 id="bio-car">Career</h4><ul class="cv">
+            <li><time>2023 ~ Present</time><span>Vice President of Academic Affairs, POSTECH</span></li>
+            <li><time>2007 ~ Present</time><span>Assistant, Associate and Full Professor, Department of Physics, POSTECH</span></li>
+            <li><time>2019 ~ 2023</time><span>Head, Division of Interdisciplinary Bioscience &amp; Bioengineering (I-BIO), POSTECH</span></li>
+            <li><time>2017 ~ 2019</time><span>Mueunjae-Chaired Professor, POSTECH</span></li>
+            <li><time>2004 ~ 2007</time><span>Postdoctoral Researcher, Harvard Medical School, USA</span></li>
+          </ul></div>
+          <div class="bio-col" role="group" aria-labelledby="bio-svc"><h4 id="bio-svc">Service</h4><ul class="cv">
+            <li><time>2021 ~ Present</time><span>Member, Commission on Biological Physics, International Union of Pure and Applied Physics (IUPAP)</span></li>
+            <li><time>2025 ~ 2026</time><span>Auditor, Asia Pacific Center for Theoretical Physics (APCTP)</span></li>
+            <li><time>2019 ~ 2021</time><span>Chair, Division of Biological Physics, Korean Physical Society</span></li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+    <div class="group-label">Postdoctoral Researcher</div>
+    <div class="people" id="postdocs"></div>
+    <div class="group-label">Graduate Students</div>
+    <div class="people" id="students"></div>
+    <div class="group-label">Alumni</div>
+    <div class="alumni" id="alumni"></div>
+  </div>
+</section>
+</div>
+<div class="view" data-view="gallery" hidden>
+<section class="page" aria-labelledby="gallery-title">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Life in the lab</div><h2 id="gallery-title">Photo gallery</h2></div>
+    <div class="gal-tools">
+      <div class="tabs gal-years" id="gal-years" role="group" aria-label="Filter by year"></div>
+      <span class="pub-count" id="gal-count"></span>
+    </div>
+    <div id="gal-list"></div>
+  </div>
+</section>
+</div>
+</main>
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-labelledby="lb-title">
+  <div class="lb-bar">
+    <div class="lb-meta"><b id="lb-title"></b><span id="lb-sub"></span></div>
+    <button class="lb-btn" id="lb-close" type="button" aria-label="Close">&times;</button>
+  </div>
+  <div class="lb-stage">
+    <button class="lb-btn lb-nav" id="lb-prev" type="button" aria-label="Previous photo">&lsaquo;</button>
+    <img id="lb-img" alt="">
+    <button class="lb-btn lb-nav" id="lb-next" type="button" aria-label="Next photo">&rsaquo;</button>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <a class="univ" href="https://www.postech.ac.kr/kor/index.do" target="_blank" rel="noopener noreferrer" aria-label="POSTECH homepage"><img src="img/postech-logo.webp" alt="POSTECH, Pohang University of Science and Technology" width="1855" height="96"></a>
+    <span>© 2026 Single-molecule Biophysics Lab, POSTECH</span>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
