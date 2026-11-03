@@ -282,6 +282,11 @@ footer a.univ{display:block;line-height:0}
 footer a.univ img{display:block;height:17px;width:auto;max-width:100%}
 @media (max-width:820px){footer a.univ img{height:auto;width:100%;max-width:240px}}
 footer a.univ:hover img{opacity:.85}
+footer .copy-note{flex:1 1 auto;text-align:center}
+footer a.privacy{font-family:"Noto Sans KR",var(--f-body);color:var(--field-muted);text-decoration:none;white-space:nowrap}
+footer a.privacy:hover{color:var(--field-fg);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:820px){footer .copy-note{flex-basis:100%;text-align:left;order:3}footer a.privacy{order:2}}
+
 
 @media (max-width:820px){
   .welcome,.contact{grid-template-columns:1fr;gap:32px}
